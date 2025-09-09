@@ -12,7 +12,7 @@ const Cards = () => {
         const response = await fetch("https://dummyjson.com/recipes");
         if (response.ok) {
           const parsedData = await response.json();
-          console.log("API Response:", parsedData);
+          // console.log("API Response:", parsedData);
           setData(parsedData.recipes);
         } else {
           console.error("Failed to fetch data");
@@ -27,9 +27,9 @@ const Cards = () => {
     loadData();
   }, []);
 
-  useEffect(() => {
-    console.log("Updated data:", data);
-  }, [data]);
+  // useEffect(() => {
+  //   console.log("Updated data:", data);
+  // }, [data]);
 
   if (loading) {
     return (
