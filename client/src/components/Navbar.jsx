@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/logo.svg";
-import Searchbar from "./Searchbar";
 import NewRecipe from "./NewRecipe"
 import { useNavigate } from "react-router-dom";
 const Navbar = () => {
@@ -13,10 +12,6 @@ const Navbar = () => {
         <h1 className="text-white text-2xl font-extrabold mx-2">RecipAI</h1>
       </div>
 
-      {/* Searchbar */}
-      {/* <div className="w-full sm:w-auto mb-2 sm:mb-0">
-        <Searchbar />
-      </div> */}
 
       {/* Button */}
       <div>

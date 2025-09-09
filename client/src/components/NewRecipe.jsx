@@ -9,7 +9,7 @@ const NewRecipe = () => {
     setChatResponse("Fetching recipe suggestions...");
 
     try {
-      const res = await axios.post(`http://localhost:3000/recipe`, formData);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/recipe`, formData);
       setChatResponse(res.data.response || "No response received");
     } catch (err) {
       console.error(err);
