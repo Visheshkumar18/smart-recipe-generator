@@ -1,8 +1,10 @@
 import React from "react";
 import logo from "../assets/logo.svg";
 import Searchbar from "./Searchbar";
-
+import NewRecipe from "./NewRecipe"
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate=useNavigate();
   return (
     <div className="flex flex-col sm:flex-row border-b-4 rounded-md mx-1 justify-between items-center p-2 fixed top-0 z-20 bg-black w-full">
       {/* Logo + Title */}
@@ -18,8 +20,9 @@ const Navbar = () => {
 
       {/* Button */}
       <div>
-        <button className="btn btn-outline btn-primary w-full sm:w-auto">
-          Generate New
+        <button className="btn btn-outline btn-primary w-full sm:w-auto" onClick={()=>navigate("/newRecipe")}>
+
+          Generate New Recipe
         </button>
       </div>
     </div>
