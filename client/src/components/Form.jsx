@@ -22,7 +22,7 @@ const Form = ({ onSubmit }) => {
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
           placeholder="e.g. chicken, tomato, onion"
-          className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-800 text-white "
         />
       </div>
 
@@ -31,7 +31,7 @@ const Form = ({ onSubmit }) => {
         <select
           value={cookingTime}
           onChange={(e) => setCookingTime(e.target.value)}
-          className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-800 text-white "
         >
           <option value="">Select time</option>
           <option value="15">Under 15 minutes</option>
@@ -49,7 +49,7 @@ const Form = ({ onSubmit }) => {
         <select
           value={cuisine}
           onChange={(e) => setCuisine(e.target.value)}
-          className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-800 text-white "
         >
           <option value="">Select cuisine</option>
           <option value="indian">Indian</option>

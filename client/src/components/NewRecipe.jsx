@@ -9,27 +9,32 @@ const NewRecipe = () => {
     setChatResponse("Fetching recipe suggestions...");
 
     try {
-      const res = await axios.post("/recipe", formData); 
+      const res = await axios.post("http://localhost:3000/recipe", formData);
       setChatResponse(res.data.response || "No response received");
     } catch (err) {
+      console.error(err);
       setChatResponse("Error fetching recipe.");
     }
   };
 
   return (
-    <div className="flex justify-center items-center w-screen min-h-screen bg-gradient-to-br from-gray-900 to-black pt-24 px-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
-        
+    <div className="flex justify-center items-start w-screen min-h-screen bg-gradient-to-br from-gray-900 to-black pt-24 px-4 sm:px-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl ">
+
         {/* Left: Form */}
         <div className="p-6 bg-gray-900 text-white border border-gray-700 rounded-2xl shadow-lg">
-          {/* <h2 className="text-2xl font-semibold mb-4 text-center"></h2> */}
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-center">
+            Enter Recipe Details
+          </h2>
           <Form onSubmit={handleFormSubmit} />
         </div>
 
         {/* Right: ChatGPT Response */}
-        <div className="p-6 bg-gray-900 text-white border border-gray-700 rounded-2xl shadow-lg flex flex-col">
-          <h2 className="text-2xl font-semibold mb-4 text-center">AI Recipe Suggestions</h2>
-          <div className="flex-1 overflow-y-auto whitespace-pre-wrap custom-scrollbar">
+        <div className="p-6 bg-gray-900 text-white border border-gray-700 rounded-2xl shadow-lg flex flex-col h-[600px]">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-center">
+            AI Recipe Suggestions
+          </h2>
+          <div className="flex-1 overflow-y-auto whitespace-pre-wrap custom-scrollbar h-[300px] sm:h-[500px] p-2 bg-gray-800 rounded-lg">
             {chatResponse ? chatResponse : "Fill the form to generate a recipe."}
           </div>
         </div>
