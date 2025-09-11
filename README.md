@@ -27,7 +27,7 @@ Deployment: Vercel/Netlify (frontend), Render/Heroku (backend) <br>
 
 1️⃣ Clone the repository <br>
 
-git clone https://github.com/your-username/smart-recipe-generator.git
+git clone https://github.com/your-username/smart-recipe-generator.git<br>
 cd smart-recipe-generator
 
 
@@ -39,8 +39,8 @@ npm install
 
 👉 Create a .env file inside backend/:
 
-GEMENI_API_KEY=your_api_key_here
-PORT=3000
+GEMENI_API_KEY=your_api_key_here<br>
+PORT=3000<br>
 
 
 ▶ Run backend:
@@ -50,8 +50,8 @@ npm run dev
 
 3️⃣ Frontend Setup <br>
 
-cd frontend
-npm install
+cd frontend<br>
+npm install<br>
 
 
 ▶ Start frontend:
@@ -75,9 +75,10 @@ Click Generate Recipe. <br>
 Get:
 📝 Recipe Name & Instructions <br>
 🍴 Nutrition Info <br>
-🖼️ Dish Image <br>
+ <br>
 
-👉 (Add UI screenshots or GIF demo here)
+<img width="1914" height="893" alt="image" src="https://github.com/user-attachments/assets/6c3e8353-baf9-4baa-b099-8c7592b573c5" />
+
 
 📌 Future Improvements
 
